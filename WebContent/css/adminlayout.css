@@ -1,0 +1,48 @@
+body {
+	font-size:14px;
+	color:#222222;
+	font-family:굴림체;
+	line-height:1.6;
+}
+a {
+	text-decoration:none;  /*link : 언더라인 안보이게 */
+}
+.container {
+	width:1010px;
+	border:0px;
+	padding:5px;
+	text-align:left;
+}
+.adminLeft {
+    width:180px;
+	border:1px solid #ccc;
+	float:left;
+	padding:5px;
+}
+.adminRight {
+    width:800px;
+    margin-left:5px;
+	border:1px solid #ccc;
+	float:right;
+	padding:5px; 
+}
+
+table.table1 {
+	width:800px;             
+	border:0px solid #ccc;
+}
+table.table1 th {
+	text-align:center;
+	font-weight:bold;
+	background-color:#cccccc;
+	border:1px solid #ccc;
+	height:30px;
+}
+table.table1 td {
+	height:25px;
+	text-align:left;
+	background-colr:#cccccc;
+}
+.p1 {
+	text-align:center;
+}
