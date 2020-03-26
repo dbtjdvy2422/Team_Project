@@ -117,6 +117,13 @@ function fn_submit() {
 			<td><input type ="text" name="addr"></td>
 		
 		</tr>
+		
+		<tr>
+			<th>주소2</th>
+			<td><input type ="text" name="addr2"></td>
+		
+		</tr>
+		
 		<tr>
 			<th>연락처</th>
 			<td><input type ="text" name="tel"></td>

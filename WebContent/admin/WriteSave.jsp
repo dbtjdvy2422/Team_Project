@@ -18,6 +18,7 @@
     String deptno=multi.getParameter("deptno");
     String name=multi.getParameter("name");
     String addr=multi.getParameter("addr");
+    String addr2=multi.getParameter("addr2");
     String tel=multi.getParameter("tel");
     String like1=multi.getParameter("like1");
     String jjim=multi.getParameter("jjim");
@@ -33,13 +34,14 @@
      String orgName1 = multi.getFilesystemName(file1); //큰이미지
     
     
-    String colums="unq,name,addr,tel,image,imgpath,deptno";
+    String colums="unq,name,addr,addr2,tel,image,imgpath,deptno";
     
     
     String sql2= "insert into tourist_spot("+colums+") "
  		   + " values(tourist_seq.nextval," 	   
  		   +" '"+name+"',"
  		   +" '"+addr+"',"
+ 		   +" '"+addr2+"',"
  		   +" '"+tel+"',"
  		   +" '"+orgName1+"',"
  		   +" '"+path+"', "
@@ -49,7 +51,7 @@
  %>
   <script>
     alert("저장완료");
-    location = "Write.jsp"
+    location = "../admin/SpotList.jsp"
     
     </script>
 

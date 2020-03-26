@@ -5,16 +5,18 @@
     <%
     String unq=request.getParameter("unq"); //unq받기
     
-    String sql= "select s.name,s.addr,s.tel,t.dname,t.deptno "; 
+    String sql= "select s.name,s.addr,s.addr2,s.tel,t.dname,t.deptno "; 
     sql+=" from tourist_spot s, tourist t ";//sql작성
      	sql+=	"where s.deptno=t.deptno and  unq='"+unq+"' " ;
 
 
     	ResultSet rs=stmt.executeQuery(sql); //sql적용
     	rs.next();
+    	String deptno=rs.getString("deptno");
     	String dname=rs.getString("dname");
 		String name=rs.getString("name");
 		String addr=rs.getString("addr");
+		String addr2=rs.getString("addr2");
 		String tel=rs.getString("tel");
 
 	
@@ -48,6 +50,13 @@ text-align:center;
 }
 
 </style>
+<script>
+		function fn_delete(){
+	confirm("정말 삭제하시겠습니까?");
+	location="SpotDelete.jsp?deptno=<%=deptno%>&unq=<%=unq%>";
+	
+}
+</script>
 <body>
 <div class="container">
 	<div class="adminLeft">
@@ -77,6 +86,13 @@ text-align:center;
 			
 			<td>주소</td>
 			<td><%=addr %></td>
+				
+			</tr>
+			
+			<tr>
+			
+			<td>주소2</td>
+			<td><%=addr2 %></td>
 				
 			</tr>
 			

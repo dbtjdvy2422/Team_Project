@@ -9,7 +9,7 @@ String RealPath = "C:/Users/user/eclipse-workspace/jeju/WebContent";
 %>
 <%
 String unq = request.getParameter("unq");
-String columns = "a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,pid";
+String columns = "a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,pid";
         
 
 String sql = " select "+columns+ " from tourist_use  "
@@ -27,6 +27,7 @@ String a7 = rs.getString("a7");
 String a8 = rs.getString("a8");
 String a9 = rs.getString("a9");
 String a10 = rs.getString("a10");
+String a11 = rs.getString("a11");
 %>
 
 
@@ -103,23 +104,30 @@ String a10 = rs.getString("a10");
 			</tr>
 			
 			<tr>
+			<th style="width:40px;">평균소요시간</th>
+			<td>
+		<input type="text" style="width:500px" name="a8" value="<%=a8 %>">
+			</td>
+			</tr>
+			
+			<tr>
 			<th style="width:40px;">경사도(난이도)</th>
 			<td>
-		<input type="text" style="width:500px"  name="a8" value="<%=a8 %>">
+		<input type="text" style="width:500px"  name="a9" value="<%=a9 %>">
 			</td>
 			</tr>
 			
 			<tr>
 			<th style="width:40px;">편의시설</th>
 			<td>
-		<input type="text" style="width:500px" name="a9" value="<%=a9 %>">
+		<input type="text" style="width:500px" name="a10" value="<%=a10 %>">
 			</td>
 			</tr>
 			
 				<tr>
 			<th style="width:40px;">기타상세</th>
 			<td>
-		<input type="text" style="width:500px" name="a10" value="<%=a10 %>">
+		<input type="text" style="width:500px" name="a11" value="<%=a11 %>">
 			</td>
 			</tr>
 

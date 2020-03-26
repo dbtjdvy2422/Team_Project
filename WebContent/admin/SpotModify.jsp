@@ -13,7 +13,7 @@ String RealPath = "C:/Users/user/eclipse-workspace/jeju/WebContent";
 String unq = request.getParameter("unq");
 String deptno="";
 
-String sql1 = " select s.unq, s.name, s.addr, s.tel, s.image, s.imgpath, t.dname,t.deptno "; 
+String sql1 = " select s.unq, s.name, s.addr,s.addr2, s.tel, s.image, s.imgpath, t.dname,t.deptno "; 
 		sql1+=" from tourist_spot s, tourist t ";
 		sql1+=" where s.deptno=t.deptno and s.unq='"+unq +"' " ;
 		Statement stmt1= conn.createStatement();
@@ -28,6 +28,7 @@ rs1.next(); // 포인터 이동
 deptno=rs1.getString("deptno");
 String name = rs1.getString("name");
 String addr = rs1.getString("addr");
+String addr2 = rs1.getString("addr2");
 String tel = rs1.getString("tel");
 String image = rs1.getString("image");
 String imgpath = rs1.getString("imgpath");
@@ -81,7 +82,7 @@ function fn_submit() {
 			<input type="hidden" name="unq" value="<%=unq%>">
 			<input type="hidden" name="oldname1" value="<%=image%>">
 	
-	<table class="table1">
+	<table class="table2">
 		<tr>
 			<th>테마</th>
 			<td><select name="deptno">
@@ -106,6 +107,10 @@ function fn_submit() {
 		<tr>
 			<th>주소</th>
 			<td><input type="text" name="addr" value="<%=addr%>"></td>
+		</tr>
+		<tr>
+			<th>주소2</th>
+			<td><input type="text" name="addr2" value="<%=addr2%>"></td>
 		</tr>
 		<tr>
 			<th>번호</th>

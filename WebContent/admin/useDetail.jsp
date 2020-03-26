@@ -5,7 +5,7 @@
     <%
     String unq=request.getParameter("unq"); //unq받기
     
-    String sql= "select a1,a2,a3,a4,a5,a6,a7,a8,a9,a10 "; 
+    String sql= "select a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11 "; 
     sql+=" from tourist_use ";//sql작성
      	sql+=	"where pid='"+unq+"' ";
 
@@ -24,11 +24,15 @@
 		String a8 = rs.getString("a8");
 		String a9 = rs.getString("a9");
 		String a10 = rs.getString("a10");
+		String a11 = rs.getString("a11");
+		
+	
 		
 		String empty="";
 	    if(a1==null){
 	    	a1=empty;
 	    }
+		
 	    if(a2==null){
 	    	a2=empty;
 	    }
@@ -56,6 +60,10 @@
 	    if(a10==null){
 	    	a10=empty;
 	    }
+	    if(a11==null){
+	    	a11=empty;
+	    }
+	    
 	    
 	
    %>
@@ -71,6 +79,8 @@
 
 <style>
 table.tb{
+width:1000px;
+height:600px;
 font-size:15px;
 margin-left:10px;
 padding:5px;
@@ -80,9 +90,12 @@ font-family:맑은 고딕;
 letter-spacing:1px;
 
 }
+
 td {
+font-size:20px;
 border-bottom:1px solid gray;
 margin-left:20px;
+height:30px;
 }
 .h2{
 margin-left:20px;

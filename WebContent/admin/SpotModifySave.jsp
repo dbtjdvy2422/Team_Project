@@ -20,6 +20,7 @@
     String unq=multi.getParameter("unq");
     String name=multi.getParameter("name");
     String addr=multi.getParameter("addr");
+    String addr2=multi.getParameter("addr2");
     String tel=multi.getParameter("tel");
     String deptno=multi.getParameter("deptno");
     String oldname1=multi.getParameter("oldname1");
@@ -43,16 +44,20 @@
     
 
     
-   String sql2= "update tourist_spot set "
+   String sql= "update tourist_spot set "
 		  	   + " name='"+name+"', "
 		  	   + " addr='"+addr+"', "
+		  	   + " addr2='"+addr2+"', "
 		  	   + " tel='"+tel+"', "
     		   + " image='"+orgName1+"', "
     		   + " path='"+path+"', "
     		   + " deptno='"+deptno+"') "
     		   +" where unq = '"+unq+"'  ";
   
-  out.print(sql2);  
+  stmt.executeUpdate(sql); 
    %>
-    
+    <script>
+    alert("수정완료");
+    location="../admin/SpotList.jsp";
+    </script>
    

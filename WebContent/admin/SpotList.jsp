@@ -3,8 +3,8 @@
     
 <%@ include file="../include/dbcon2.jsp" %> 
 
-<%
 
+<%
 int unit=5;
 String viewPage=request.getParameter("viewPage");
 if(viewPage==null){
@@ -45,6 +45,9 @@ text-align:center;
 }
 
 </style>
+<script type="text/javascript">
+
+</script>
 <body>
 <div class="container">
 	<div class="adminLeft">
@@ -109,8 +112,7 @@ text-align:center;
  			
  			<input type="button" value="추가"
         	onclick="location='Write.jsp'">
-        	<input type="button" value="삭제"
-        	onclick="fn_delete()">  
+        	 
   </div>
   
   

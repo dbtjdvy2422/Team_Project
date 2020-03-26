@@ -17,11 +17,12 @@
    String a8= request.getParameter("a8");
    String a9= request.getParameter("a9");
    String a10= request.getParameter("a10");
+   String a11= request.getParameter("a11");
    
    
    
    
-   String colums="pid,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10";
+   String colums="pid,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11";
    
    
    String sql= "insert into tourist_use("+colums+") "
@@ -36,7 +37,8 @@
 		   +" '"+a7+"',"
 		   +" '"+a8+"',"
 		   +" '"+a9+"', "
-		   +" '"+a10+"')";
+		   +" '"+a10+"', "
+   		   +" '"+a11+"')";
  
    stmt.executeUpdate(sql);
    %>

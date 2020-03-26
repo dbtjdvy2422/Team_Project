@@ -20,16 +20,17 @@ String unq=request.getParameter("unq");
 
 <style>
 
-
-width:300px;
-height:23px;
-
-}
-
 textarea{
 
 width:500px;
 height:80px;
+
+}
+
+input{
+
+width:800px;
+height:40px;
 
 }
 </style>
@@ -47,59 +48,66 @@ height:80px;
 	<div class="adminRight">
 	<!-- 상품등록 -->
 	<form name="frm" method="post" action= "useWriteSave.jsp">
-	<table class="table1">
+	<table class="table2">
 	 <tr>
  <td><input type="hidden" name="pid" value="<%=unq%>"></td>
  </tr>
  <tr>
- <td>소개</td>
+ <th>소개</th>
  <td><input type="text" name="a1"></td>
  </tr>
  
  <tr>
- <td>상세정보</td>
+ <th>상세정보</th>
  <td><input type="text" name="a2"></td>
  </tr>
  
  <tr>
- <td>이용시간</td>
+ <th>이용시간</th>
  <td><input type="text" name="a3"></td>
  </tr>
  
  <tr>
- <td>요금정보</td>
+ <th>요금정보</th>
  <td><input type="text" name="a4"></td>
  </tr>
  
  <tr>
- <td>장소특성</td>
+ <th>장소특성</th>
  <td><input type="text" name="a5"></td>
  </tr>
  
  <tr>
- <td>주요목적</td>
+ <th>주요목적</th>
  <td><input type="text" name="a6"></td>
  </tr>
  
  <tr>
- <td>주요목적 기타</td>
+ <th>주요목적 기타</th>
  <td><input type="text" name="a7"></td>
  </tr>
  
- <tr>
- <td>경사도(난이도)</td>
+  <tr>
+ <th>평균 소요 시간</th>
  <td><input type="text" name="a8"></td>
  </tr>
  
  <tr>
- <td>편의시설</td>
+ <th>경사도(난이도)</th>
  <td><input type="text" name="a9"></td>
  </tr>
  
  <tr>
- <td>기타 상세</td>
+ <th>편의시설</th>
  <td><input type="text" name="a10"></td>
  </tr>
+ 
+ <tr>
+ <th>기타 상세</th>
+ <td><input type="text" name="a11"></td>
+ </tr>
+ 
+ 
 
 
 	</table>

@@ -13,6 +13,7 @@
     String a8=request.getParameter("a8");
     String a9=request.getParameter("a9");
     String a10=request.getParameter("a10");
+    String a11=request.getParameter("a11");
     
 
 
@@ -26,7 +27,8 @@
     sql+= " a7='"+a7+"', ";
     sql+= " a8='"+a8+"', ";
     sql+= " a9='"+a9+"', ";
-    sql+= " a10='"+a10+"' ";
+    sql+= " a10='"+a10+"', ";
+    sql+= " a11='"+a11+"' ";
     sql+= " where pid='"+unq+"' ";
     stmt.executeUpdate(sql);
     %>
